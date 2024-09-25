@@ -8,11 +8,12 @@ public class FibonacciRecursion {
         int input = scan.nextInt();
         
         for (int i = 1; i <= input; i++) {
-            if (i == n) {
+            if (i == input) {
                 System.out.println(fibonacci(i));
-            }
 
-            System.out.print(fibonacci(i) + " ");
+            } else {
+                System.out.print(fibonacci(i) + " ");
+            }
         }
     }
 

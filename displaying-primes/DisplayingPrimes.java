@@ -10,7 +10,11 @@ public class DisplayingPrimes {
         int count = 0;
         int number = 1;
 
-        while (count <= input) {
+        while (true) {
+            if (count == input) {
+                return;
+            }
+
             if (isPrime(number)) {
                 System.out.print(number + " ");
                 count++;

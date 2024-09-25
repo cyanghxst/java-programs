@@ -12,9 +12,9 @@ public class GuessingNumbers {
             input = scan.nextInt();
 
             if (input > random) {
-                System.out.println("\nToo High!");
+                System.out.println("\nToo High!\n");
             } else if (input < random){
-                System.out.println("\nToo Low!");
+                System.out.println("\nToo Low!\n");
             }
         }
 

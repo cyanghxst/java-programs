@@ -7,10 +7,15 @@ public class DisplayingPrimes {
         System.out.print("Enter a number: ");
         int input = scan.nextInt();
 
-        for (int i = 1; i <= input; i++) {
-            if (isPrime(i)) {
-                System.out.print(i + " ");
+        int count = 0;
+        int number = 1;
+
+        while (count <= input) {
+            if (isPrime(number)) {
+                System.out.print(number + " ");
+                count++;
             }
+            number++;
         }
     }
 

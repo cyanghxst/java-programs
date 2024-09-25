@@ -11,7 +11,7 @@ public class AdditionQuizWhile {
 
         while (input != answer) {
             System.out.print(num1 + " + " + num2 + " = ");
-            answer = scan.nextInt();
+            input = scan.nextInt();
 
             if (input != answer) {
                 System.out.println("\nTry Again!\n");

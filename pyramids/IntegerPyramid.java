@@ -20,6 +20,8 @@ public class IntegerPyramid {
             for (int integer = 1; integer <= row; integer++) {
                 System.out.print(integer);
             }
+
+            System.out.println();
         }
     }
 }

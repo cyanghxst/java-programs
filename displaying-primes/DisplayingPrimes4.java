@@ -8,6 +8,7 @@ public class DisplayingPrimes4 {
         for (int i = 1; i <= TOTAL_PRIMES / 10; i++) {
             while (true) {
                 if (count == 10) {
+                    count = 0;
                     break;
                 }
 

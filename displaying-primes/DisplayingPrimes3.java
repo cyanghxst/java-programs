@@ -2,24 +2,34 @@ public class DisplayingPrimes3 {
     public static void main(String[] args) {
         final int NUMBERS_OF_PRIMES = 50;
 
+        int count = 0;
         int number = 1;
+        boolean isPrime = true;
 
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 10; j++) {
-                if (number < 2) {
-                    continue;
-                }
+        while (true) {
+            if (count == NUMBERS_OF_PRIMES) {
+                break;
+            }
 
-                for (int divisor = 2; divisor <= Math.sqrt(number); divisor++) {
-                    if (number % divisor == 0) {
-                        continue;
-                    }
+            if (number < 2) {
+                number++;
+                continue;
+            }
 
-                    System.out.print(number + " ");
+            for (int divisor = 2; divisor <= Math.sqrt(number); divisor++) {
+                if (number % divisor == 0) {
+                    isPrime = false;
+                    break;
                 }
             }
 
-            System.out.println();
+            if (isPrime) {
+                System.out.print(number + " ");
+                count++;
+            }
+
+            number++;
+            isPrime = true;
         }
     }
 }

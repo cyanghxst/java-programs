@@ -1,7 +1,5 @@
 public class DisplayingPrimes3 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
         final int NUMBERS_OF_PRIMES = 50;
 
         int number = 1;

@@ -18,7 +18,11 @@ public class StarPyramid {
             }
 
             for (int star = 1; star <= row; star++) {
-                System.out.print("*");
+                if (star % 2 == 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("-");
+                }
             }
 
             System.out.println();

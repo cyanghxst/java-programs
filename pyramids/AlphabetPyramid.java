@@ -18,7 +18,8 @@ public class AlphabetPyramid {
             }
 
             for (int i = 1; i <= row; i++) {
-                System.out.print(i);
+                char character = (char) (65 + i - 1);
+                System.out.print(character);
             }
 
             System.out.println();

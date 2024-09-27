@@ -33,4 +33,12 @@ public class ChristmasTree {
             System.out.print(" ");
         }
     }
+
+    public static void printBase(int number) {
+        for (int i = 1; i <= number; i++) {
+            printBlank(number - 2);
+            printStar(3);
+            System.out.println();
+        }
+    }
 }

@@ -8,8 +8,13 @@ public class ChristmasTree {
         int number = scan.nextInt();
 
         System.out.println();
-        printBlank(number);
-        printStar(number);
+
+        for (int i = 1; i <= number; i++) {
+            printBlank(number - i);
+            printStar(i);
+            printStar(i - 1);
+            System.out.println();
+        }
     }
 
     public static void printStar(int number) {

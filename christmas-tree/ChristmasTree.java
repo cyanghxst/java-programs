@@ -11,8 +11,13 @@ public class ChristmasTree {
 
         for (int i = 1; i <= number; i++) {
             printBlank(number - i);
-            printStar(i);
-            printStar(i - 1);
+            printStar(2 * i - 1);
+            System.out.println();
+        }
+
+        for (int i = 1; i <= 2; i++) {
+            printBlank(number - 2);
+            printStar(3);
             System.out.println();
         }
     }

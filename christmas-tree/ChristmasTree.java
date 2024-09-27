@@ -26,7 +26,7 @@ public class ChristmasTree {
     }
 
     public static void printBase(int number) {
-        for (int i = 1; i <= number; i++) {
+        for (int i = 1; i <= 2; i++) {
             printBlank(number - 2);
             printStar(3);
             System.out.println();

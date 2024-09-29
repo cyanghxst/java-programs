@@ -9,9 +9,9 @@ public class InvertedPyramid {
 
         System.out.println();
 
-        for (int i = 1; i <= number; i++) {
-            for (int j = number - i + 1; j <= 1; j--) {
-                System.out.print(j);
+        for (int i = 0; i < number; i++) {
+            for (int j = number - i; j >= 1; j--) {
+                System.out.print(number - i);
             }
             System.out.println();
         }

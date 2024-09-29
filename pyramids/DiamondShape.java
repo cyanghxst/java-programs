@@ -16,6 +16,10 @@ public class DiamondShape {
                 System.out.print(k);
             }
 
+            for (int l = i - 1; l >= 1; l--) {
+                System.out.print(l);
+            }
+
             System.out.println();
         }
     }

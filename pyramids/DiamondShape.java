@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public public class DiamondShape {
+public class DiamondShape {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 

@@ -10,7 +10,7 @@ public class InvertedPyramid {
         System.out.println();
 
         for (int i = 0; i < number; i++) {
-            for (int j = number - i; j >= 1; j--) {
+            for (int j = 1; j <= number - i; j++) {
                 System.out.print(number - i);
             }
             System.out.println();

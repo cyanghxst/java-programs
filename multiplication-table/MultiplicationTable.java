@@ -7,9 +7,11 @@ public class MultiplicationTable {
         System.out.print("Enter a number: ");
         int number = scan.nextInt();
 
+        System.out.println();
+
         for (int i = 1; i <= number; i++) {
             for (int j = 1; j <= number; j++) {
-                System.out.print(j + "  ");
+                System.out.print(j * i + " ");
             }
 
             System.out.println();

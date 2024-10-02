@@ -7,7 +7,7 @@ public class ConvertingHex {
         System.out.print("Enter a hexadecimal value: ");
         String hex = scan.nextLine();
 
-        System.out.println(convertHexToDecimal(hex));
+        System.out.println("\nThe decimal value is: " + convertHexToDecimal(hex));
     }
 
     public static int convertHexToDecimal(String hex) {

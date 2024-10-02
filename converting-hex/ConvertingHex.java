@@ -10,8 +10,8 @@ public class ConvertingHex {
         System.out.println(convertHexToDecimal(hex));
     }
 
-    public static double convertHexToDecimal(String hex) {
-        double result = 0;
+    public static int convertHexToDecimal(String hex) {
+        int result = 0;
         int power = 0;
 
         for (int i = hex.length() - 1; i >= 0; i--) {
@@ -28,7 +28,7 @@ public class ConvertingHex {
                 System.out.println("The input is not a hexadecimal value");
             }
 
-            result += value * Math.pow(16, power);
+            result += (int) (value * Math.pow(16, power));
             power++;
         }
 

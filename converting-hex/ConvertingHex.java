@@ -10,7 +10,7 @@ public class ConvertingHex {
         System.out.println(convertHexToDecimal(hex));
     }
 
-    public static int convertHexToDecimal(String hex) {
+    public static double convertHexToDecimal(String hex) {
         double result = 0;
         int power = 0;
 

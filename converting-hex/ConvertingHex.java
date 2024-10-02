@@ -25,7 +25,7 @@ public class ConvertingHex {
             } else if (digit >= '0' && digit <= '9') {
                 value = Integer.parseInt(String.valueOf(digit));
             } else {
-                System.out.println("The input is not a hexadecimal value");
+                return -1;
             }
 
             result += (int) (value * Math.pow(16, power));

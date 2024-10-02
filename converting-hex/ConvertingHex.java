@@ -16,19 +16,20 @@ public class ConvertingHex {
 
         for (int i = hex.length() - 1; i >= 0; i--) {
             char digit = hex.charAt(i);
-            int value;
+            int value = 0;
 
             if (digit >= 'A' && digit <= 'F') {
                 value = (int) (digit - 55);
             } else if (digit >= 'a' && digit <= 'f') {
                 value = (int) (digit - 87);
             } else if (digit >= '0' && digit <= '9') {
-                value = Integer.parseInt(digit);
+                value = Integer.parseInt(String.valueOf(digit));
             } else {
                 System.out.println("The input is not a hexadecimal value");
             }
 
             result += value * Math.pow(16, power);
+            power++;
         }
 
         return result;

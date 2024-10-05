@@ -9,4 +9,12 @@ public class PrintDigits {
             System.out.println(input.charAt(i));
         }
     }
+
+    public static void printDigits2(int number) {
+        int dividend = number;
+        while (dividen >= 0) {
+            System.out.println(dividend % 10);
+            dividend = dividend / 10;
+        }
+    }
 }

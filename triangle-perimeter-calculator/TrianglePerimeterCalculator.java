@@ -59,7 +59,9 @@ public class TrianglePerimeterCalculator {
         double distance2to3 = calculateDistance(x2, y2, x3, y3);
         double distance3to1 = calculateDistance(x3, y3, x1, y1);
 
-        if (distance1to2 + distance2to3 == distance3to1) {
+        if (distance1to2 + distance2to3 == distance3to1 ||
+            distance2to3 + distance3to1 == distance1to2 ||
+            distance3to1 + distance1to2 == distance2to3) {
             return false;
         }
 

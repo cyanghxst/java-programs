@@ -39,4 +39,22 @@ public class TrianglePerimeterCalculator {
         double distance = Math.sqrt(deltaXSquare + deltaYSquare);
         return distance;
     }
+
+    public static boolean isValid(int x1, int y1, int x2, int y2, int x3, int y3) {
+        if (x1 < 0 || x1 > 40 || y1 < 0 || y1 > 40 ||
+            x2 < 0 || x2 > 40 || y2 < 0 || y2 > 40 ||
+            x3 < 0 || x3 > 40 || y3 < 0 || y3 > 40) {
+            return false;
+        }
+
+        double distance1to2 = calculateDistance(x1, y1, x2, y2);
+        double distance2to3 = calculateDistance(x2, y2, x3, y3);
+        double distance3to1 = calculateDistance(x3, y3, x1, y1);
+
+        if (distance1to2 + distance2to3 == distance3to1) {
+            return false;
+        }
+
+        return true;
+    }
 }

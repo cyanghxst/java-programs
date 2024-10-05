@@ -58,4 +58,13 @@ public class TrianglePerimeterCalculator {
 
         return true;
     }
+
+    public static double calculatePerimeter(int x1, int y1, int x2, int y2, int x3, int y3) {
+        double distance1to2 = calculateDistance(x1, y1, x2, y2);
+        double distance2to3 = calculateDistance(x2, y2, x3, y3);
+        double distance3to1 = calculateDistance(x3, y3, x1, y1);
+
+        double perimeter = distance1to2 + distance2to3 + distance3to1;
+        return perimeter;
+    }
 }

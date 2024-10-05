@@ -1,6 +1,10 @@
 public class PrintDigits {
     public static void main(String[] args) {
         printDigits(749);
+
+        System.out.println();
+
+        printDigits2(749);
     }
 
     public static void printDigits(int number) {

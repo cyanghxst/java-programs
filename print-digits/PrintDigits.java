@@ -1,10 +1,17 @@
+import java.util.Scanner;
+
 public class PrintDigits {
     public static void main(String[] args) {
-        printDigits(749);
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int input = scan.nextInt();
+
+        printDigits(input);
 
         System.out.println();
 
-        printDigits2(749);
+        printDigits2(input);
     }
 
     public static void printDigits(int number) {

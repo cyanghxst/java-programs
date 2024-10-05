@@ -11,7 +11,7 @@ public class TrianglePerimeterCalculator {
         System.out.println("This program calculates the perimetre of a triangle.");
 
         do {
-            System.out.print("Please enter the x-coordinate for the point1: ");
+            System.out.print("\nPlease enter the x-coordinate for the point1: ");
             x1 = scan.nextInt();
 
             System.out.print("Please enter the y-coordinate for the point1: ");

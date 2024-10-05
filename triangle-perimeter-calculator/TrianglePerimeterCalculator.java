@@ -29,6 +29,13 @@ public class TrianglePerimeterCalculator {
             System.out.print("Please enter the y-coordinate for the point3: ");
             y3 = scan.nextInt();
 
+            if (isValid(x1, y1, x2, y2, x3, y3)) {
+                perimeter = calculatePerimeter(x1, y1, x2, y2, x3, y3);
+                System.out.printf("\nThe perimeter of a triangle with point1 (%d, %d), point2 (%d, %d), point3 (%d, %d) is %f", x1, y1, x2, y2, x3, y3, perimeter);
+            } else {
+                System.out.println("\nError: You have entered invalid input.");
+            }
+
             System.out.print("\nWould you like to repeat the program? ");
             input = scan.next();
         } while (!input.equalsIgnoreCase("no"));

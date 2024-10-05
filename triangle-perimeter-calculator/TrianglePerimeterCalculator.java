@@ -5,6 +5,7 @@ public class TrianglePerimeterCalculator {
         Scanner scan = new Scanner(System.in);
 
         int x1, y1, x2, y2, x3, y3;
+        double perimeter;
         String input;
 
         System.out.println("This program calculates the perimetre of a triangle.");

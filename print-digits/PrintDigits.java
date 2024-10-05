@@ -12,7 +12,7 @@ public class PrintDigits {
 
     public static void printDigits2(int number) {
         int dividend = number;
-        while (dividen >= 0) {
+        while (dividend > 0) {
             System.out.println(dividend % 10);
             dividend = dividend / 10;
         }

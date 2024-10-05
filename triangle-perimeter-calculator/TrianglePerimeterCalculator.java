@@ -32,4 +32,11 @@ public class TrianglePerimeterCalculator {
             input = scan.next();
         } while (!input.equalsIgnoreCase("no"));
     }
+
+    public static double calculateDistance(int x1, int y1, int x2, int y2) {
+        double deltaXSquare = Math.pow(x1 - x2, 2);
+        double deltaYSquare = Math.pow(y1 - y2, 2);
+        double distance = Math.sqrt(deltaXSquare + deltaYSquare);
+        return distance;
+    }
 }

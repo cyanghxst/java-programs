@@ -38,6 +38,10 @@ public class TrianglePerimeterCalculator {
 
             System.out.print("\nWould you like to repeat the program? ");
             input = scan.next();
+
+            if (input.equalsIgnoreCase("no")) {
+                System.out.println("\nEnd of the program.");
+            }
         } while (!input.equalsIgnoreCase("no"));
     }
 

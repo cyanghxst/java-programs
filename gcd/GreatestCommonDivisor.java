@@ -18,6 +18,7 @@ public class GreatestCommonDivisor {
         int divisor = Math.min(num1, num2);
         int remainder;
 
+        // Euclidean algorithm
         while (true) {
             remainder = dividend % divisor;
 

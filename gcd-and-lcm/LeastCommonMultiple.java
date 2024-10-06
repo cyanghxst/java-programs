@@ -10,7 +10,7 @@ public class LeastCommonMultiple {
         System.out.print("Enter the 2nd number: ");
         int num2 = scan.nextInt();
 
-        System.out.printf("\nThe least common multiple of %d and %d is %d", num1, num2, lcm(num1, num2));
+        System.out.printf("\nThe least common multiple of %d and %d is %d\n", num1, num2, lcm(num1, num2));
     }
 
     public static int lcm(int num1, int num2) {

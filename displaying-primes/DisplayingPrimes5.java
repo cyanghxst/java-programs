@@ -12,19 +12,20 @@ public class DisplayingPrimes5 {
             }
 
             for (int divisor = 2; divisor <= Math.sqrt(number); divisor++) {
-                if (number % number == 0) {
+                if (number % divisor == 0) {
                     isPrime = false;
+                    break;
                 }
             }
 
             if (isPrime) {
-                count++;
-
                 if (count % 10 == 0) {
                     System.out.println(number);
                 } else {
                     System.out.print(number + " ");
                 }
+
+                count++;
             }
 
             number++;

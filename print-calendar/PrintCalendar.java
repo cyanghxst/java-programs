@@ -19,99 +19,6 @@ public class PrintCalendar {
         printBody(month, year);
     }
 
-    public static void printBody(int month, int year) {
-        printDaysInAWeek();
-        printDays(month, year);
-    }
-
-    public static void printDaysInAWeek() {
-        System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
-    }
-
-    public static void printDays(int month, int year) {
-        int days = daysInAMonth(month, year);
-        int start = startDay(month, year);
-
-        int count = 1;
-
-        for (int i = 1; i <= start; i++) {
-            System.out.printf("    ");
-            count++;
-        }
-
-        for (int day = 1; day <= days; day++) {
-            if (day / 10 == 0) {
-                System.out.printf("   " + day);
-            } else {
-                System.out.printf("  " + day);
-            }
-
-            if (count % 7 == 0) {
-                System.out.println();
-            }
-
-            count++;
-        }
-
-        System.out.println();
-
-    }
-
-    public static int daysInAMonth(int month, int year) {
-        int days;
-
-        switch (month) {
-            case 2:
-                days = (isLeap(year) ? 29 : 28);
-                break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                days = 30;
-                break;
-            default:
-                days = 31;
-        }
-
-        return days;
-    }
-
-    public static boolean isLeap(int year) {
-        if (year % 100 == 0 && year % 400 != 0) {
-            return false;
-        }
-
-        if (year % 4 == 0) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public static int startDay(int month, int year) {
-        switch (month) {
-            case 1:
-                month = 11;
-                year = year - 1;
-                break;
-            case 2:
-                month = 12;
-                year = year - 1;
-                break;
-            default:
-                month = month - 2;
-        }
-
-        // Zeller's congruence (Sunday-is-0 variant)
-        int twoDigitsOfYear = year % 100;
-        int century = year / 100;
-
-        int dayOfTheWeek = (1 + (13 * month - 1 / 5) + twoDigitsOfYear + twoDigitsOfYear / 4 + century / 4 - 2 * century) % 7;
-
-        return dayOfTheWeek;
-    }
-
     public static void printHeader(int month, int year) {
         String monthName = monthName(month);
         String line = "-----------------------------";
@@ -121,20 +28,6 @@ public class PrintCalendar {
         printSpaces(monthName, year, line);
         System.out.println(monthName + " " + year);
         System.out.println(line);
-    }
-
-    public static void printSpaces(String monthName, int year, String line) {
-        String yearString = String.valueOf(year);
-
-        int lineLength = line.length();
-        int monthNameLength = monthName.length();
-        int yearLength = yearString.length();
-
-        int count = (lineLength - (monthNameLength + yearLength + 1)) / 2;
-
-        for (int i = 1; i <= count; i++) {
-            System.out.print(" ");
-        }
     }
 
     public static String monthName(int month) {
@@ -182,5 +75,112 @@ public class PrintCalendar {
         }
 
         return monthName;
+    }
+
+    public static void printSpaces(String monthName, int year, String line) {
+        String yearString = String.valueOf(year);
+
+        int lineLength = line.length();
+        int monthNameLength = monthName.length();
+        int yearLength = yearString.length();
+
+        int count = (lineLength - (monthNameLength + yearLength + 1)) / 2;
+
+        for (int i = 1; i <= count; i++) {
+            System.out.print(" ");
+        }
+    }
+
+    public static void printBody(int month, int year) {
+        printDaysInAWeek();
+        printDays(month, year);
+    }
+
+    public static void printDaysInAWeek() {
+        System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+    }
+
+    public static void printDays(int month, int year) {
+        int start = startDay(month, year);
+        int days = daysInAMonth(month, year);
+
+        int count = 1;
+
+        for (int i = 1; i <= start; i++) {
+            System.out.printf("    ");
+            count++;
+        }
+
+        for (int day = 1; day <= days; day++) {
+            if (day / 10 == 0) {
+                System.out.printf("   " + day);
+            } else {
+                System.out.printf("  " + day);
+            }
+
+            if (count % 7 == 0) {
+                System.out.println();
+            }
+
+            count++;
+        }
+
+        System.out.println();
+
+    }
+
+    public static int startDay(int month, int year) {
+        switch (month) {
+            case 1:
+                month = 11;
+                year = year - 1;
+                break;
+            case 2:
+                month = 12;
+                year = year - 1;
+                break;
+            default:
+                month = month - 2;
+        }
+
+        // Zeller's congruence (Sunday-is-0 variant)
+        int twoDigitsOfYear = year % 100;
+        int century = year / 100;
+
+        int dayOfTheWeek = (1 + (13 * month - 1 / 5) + twoDigitsOfYear + twoDigitsOfYear / 4 + century / 4 - 2 * century) % 7;
+
+        return dayOfTheWeek;
+    }
+
+    public static int daysInAMonth(int month, int year) {
+        int days;
+
+        switch (month) {
+            case 2:
+                days = (isLeap(year) ? 29 : 28);
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                days = 30;
+                break;
+            default:
+                days = 31;
+        }
+
+        return days;
+    }
+
+    public static boolean isLeap(int year) {
+        if (year % 100 == 0 && year % 400 != 0) {
+            return false;
+        }
+
+        if (year % 4 == 0) {
+            return true;
+        }
+
+        return false;
     }
 }

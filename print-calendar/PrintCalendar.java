@@ -80,15 +80,21 @@ public class PrintCalendar {
         switch (month) {
             case 1:
                 month = 13;
+                year = year - 1;
                 break;
             case 2:
                 month = 14;
+                year = year - 1;
                 break;
         }
 
-        int d = (int) (1 + Math.floor(13.0 / 5 * (month + 1)) + year % 100 + Math.floor(year % 100 / 4.0) + Math.floor(year / 100) - 2 * (year / 100)) % 7;
+        // Zeller's congruence
+        int twoDigitsOfYear = year % 100;
+        int century = year / 100;
 
-        return d;
+        int dayOfTheWeek = (1 + (13 * (month + 1) / 5) + twoDigitsOfYear + twoDigitsOfYear / 4 + century / 4 - 2 * century) % 7;
+
+        return dayOfTheWeek;
     }
 
     public static void printDaysInAWeek() {

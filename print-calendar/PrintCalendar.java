@@ -59,7 +59,7 @@ public class PrintCalendar {
                 monthName = "December";
                 break;
             default:
-                monthName = "n/a";
+                monthName = "none";
         }
 
         System.out.printf("          %s %d          \n", monthName, year);

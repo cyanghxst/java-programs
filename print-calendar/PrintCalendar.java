@@ -86,7 +86,7 @@ public class PrintCalendar {
                 break;
         }
 
-        int d = (1 + Math.floor(13.0 / 5 * (month + 1)) + year % 100 + Math.floor(year % 100 / 4.0) + Math.floor(year / 100) - 2 * (year / 100)) % 7;
+        int d = (int) (1 + Math.floor(13.0 / 5 * (month + 1)) + year % 100 + Math.floor(year % 100 / 4.0) + Math.floor(year / 100) - 2 * (year / 100)) % 7;
 
         return d;
     }

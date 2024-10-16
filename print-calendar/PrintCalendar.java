@@ -85,6 +85,21 @@ public class PrintCalendar {
 
     }
 
+    public static int startDay(int month, int year) {
+        switch (month) {
+            case 1:
+                month = 13;
+                break;
+            case 2:
+                month = 14;
+                break;
+        }
+
+        int d = (1 + Math.floor(13.0 / 5 * (month + 1)) + year % 100 + Math.floor(year % 100 / 4.0) + Math.floor(year / 100) - 2 * (year / 100)) % 7;
+
+        return d;
+    }
+
     public static void printDaysInAWeek() {
         System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
     }

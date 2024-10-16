@@ -92,20 +92,22 @@ public class PrintCalendar {
     public static int startDay(int month, int year) {
         switch (month) {
             case 1:
-                month = 13;
+                month = 11;
                 year = year - 1;
                 break;
             case 2:
-                month = 14;
+                month = 12;
                 year = year - 1;
                 break;
+            default:
+                month = month - 2;
         }
 
-        // Zeller's congruence
+        // Zeller's congruence (Sunday-is-0 variant)
         int twoDigitsOfYear = year % 100;
         int century = year / 100;
 
-        int dayOfTheWeek = (1 + (13 * (month + 1) / 5) + twoDigitsOfYear + twoDigitsOfYear / 4 + century / 4 - 2 * century) % 7;
+        int dayOfTheWeek = (1 + (13 * month - 1 / 5) + twoDigitsOfYear + twoDigitsOfYear / 4 + century / 4 - 2 * century) % 7;
 
         return dayOfTheWeek;
     }

@@ -24,6 +24,10 @@ public class PrintCalendar {
         printDays(month, year);
     }
 
+    public static void printDaysInAWeek() {
+        System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+    }
+
     public static void printDays(int month, int year) {
         int days = daysInAMonth(month, year);
         int start = startDay(month, year);
@@ -104,10 +108,6 @@ public class PrintCalendar {
         int dayOfTheWeek = (1 + (13 * (month + 1) / 5) + twoDigitsOfYear + twoDigitsOfYear / 4 + century / 4 - 2 * century) % 7;
 
         return dayOfTheWeek;
-    }
-
-    public static void printDaysInAWeek() {
-        System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
     }
 
     public static void printHeader(int month, int year) {

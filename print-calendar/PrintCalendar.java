@@ -64,10 +64,16 @@ public class PrintCalendar {
         return days;
     }
 
+    public static boolean isLeap(int year) {
+        if (year % 100 == 0 && year % 400 != 0) {
+            return false;
         }
 
-        System.out.println();
+        if (year % 4 == 0) {
+            return true;
+        }
 
+        return false;
     }
 
     public static int startDay(int month, int year) {

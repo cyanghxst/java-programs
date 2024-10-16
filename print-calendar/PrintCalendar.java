@@ -26,18 +26,27 @@ public class PrintCalendar {
 
     public static void printDays(int month, int year) {
         int days = daysInAMonth(month, year);
+        int start = startDay(month, year);
+
+        int count = 1;
+
+        for (int i = 1; i <= start; i++) {
+            System.out.printf("    ");
+            count++;
+        }
 
         for (int day = 1; day <= days; day++) {
-
             if (day / 10 == 0) {
                 System.out.printf("   " + day);
             } else {
                 System.out.printf("  " + day);
             }
 
-            if (day % 7 == 0) {
+            if (count % 7 == 0) {
                 System.out.println();
             }
+
+            count++;
         }
 
         System.out.println();

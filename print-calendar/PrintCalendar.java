@@ -16,6 +16,15 @@ public class PrintCalendar {
         }
 
         printHeader(month, year);
+        printBody(month, year);
+    }
+
+    public static void printBody(int month, int year) {
+        printDaysInAWeek();
+    }
+
+    public static void printDaysInAWeek() {
+        System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
     }
 
     public static void printHeader(int month, int year) {

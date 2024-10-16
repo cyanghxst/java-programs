@@ -25,7 +25,24 @@ public class PrintCalendar {
     }
 
     public static void printDays(int month, int year) {
-        int total;
+        int days = daysInAMonth(month, year);
+
+        for (int day = 1; day <= days; day++) {
+
+            if (day / 10 == 0) {
+                System.out.printf("   " + day);
+            } else {
+                System.out.printf("  " + day);
+            }
+
+            if (day % 7 == 0) {
+                System.out.println();
+            }
+        }
+
+        System.out.println();
+
+    }
 
         switch (month) {
             case 1:

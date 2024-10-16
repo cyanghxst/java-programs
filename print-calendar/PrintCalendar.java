@@ -117,12 +117,13 @@ public class PrintCalendar {
         String line = "-----------------------------";
 
         System.out.println();
-        printPreceedingSpaces(monthName, year, line);
+
+        printSpaces(monthName, year, line);
         System.out.println(monthName + " " + year);
         System.out.println(line);
     }
 
-    public static void printPreceedingSpaces(String monthName, int year, String line) {
+    public static void printSpaces(String monthName, int year, String line) {
         String yearString = String.valueOf(year);
 
         int lineLength = line.length();

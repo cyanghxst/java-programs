@@ -15,13 +15,37 @@ public class PrintCalendar {
             return;
         }
 
-        printHeader(year, month);
+        printHeader(month, year);
     }
 
-    public static void printHeader(int year, int monthNumber) {
+    public static void printHeader(int month, int year) {
+        String monthName = monthName(month);
+        String line = "-----------------------------";
+
+        System.out.println();
+        printPreceedingSpaces(monthName, year, line);
+        System.out.println(monthName + " " + year);
+        System.out.println(line);
+    }
+
+    public static void printPreceedingSpaces(String monthName, int year, String line) {
+        String yearString = String.valueOf(year);
+
+        int lineLength = line.length();
+        int monthNameLength = monthName.length();
+        int yearLength = yearString.length();
+
+        int count = (lineLength - (monthNameLength + yearLength + 1)) / 2;
+
+        for (int i = 1; i <= count; i++) {
+            System.out.print(" ");
+        }
+    }
+
+    public static String monthName(int month) {
         String monthName;
 
-        switch(monthNumber) {
+        switch(month) {
             case 1:
                 monthName = "January";
                 break;
@@ -62,6 +86,6 @@ public class PrintCalendar {
                 monthName = "none";
         }
 
-        System.out.printf("\n          %s %d          \n", monthName, year);
+        return monthName;
     }
 }

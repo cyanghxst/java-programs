@@ -62,6 +62,6 @@ public class PrintCalendar {
                 monthName = "none";
         }
 
-        System.out.printf("          %s %d          \n", monthName, year);
+        System.out.printf("\n          %s %d          \n", monthName, year);
     }
 }

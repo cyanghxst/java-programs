@@ -21,6 +21,68 @@ public class PrintCalendar {
 
     public static void printBody(int month, int year) {
         printDaysInAWeek();
+        printDays(month, year);
+    }
+
+    public static void printDays(int month, int year) {
+        int total;
+
+        switch (month) {
+            case 1:
+                total = 31;
+                break;
+            case 2:
+                total = 29;
+                break;
+            case 3:
+                total = 31;
+                break;
+            case 4:
+                total = 30;
+                break;
+            case 5:
+                total = 31;
+                break;
+            case 6:
+                total = 30;
+                break;
+            case 7:
+                total = 31;
+                break;
+            case 8:
+                total = 31;
+                break;
+            case 9:
+                total = 30;
+                break;
+            case 10:
+                total = 31;
+                break;
+            case 11:
+                total = 30;
+                break;
+            case 12:
+                total = 31;
+                break;
+            default:
+                total = 31;
+        }
+
+        for (int day = 1; day <= total; day++) {
+
+            if (day / 10 == 0) {
+                System.out.printf("   " + day);
+            } else {
+                System.out.printf("  " + day);
+            }
+
+            if (day % 7 == 0) {
+                System.out.println();
+            }
+        }
+
+        System.out.println();
+
     }
 
     public static void printDaysInAWeek() {

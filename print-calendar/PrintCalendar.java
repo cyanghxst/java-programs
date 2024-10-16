@@ -9,6 +9,13 @@ public class PrintCalendar {
 
         System.out.print("Enter month in number between 1 and 12: ");
         int month = scan.nextInt();
+
+        if (month < 1 || month > 12) {
+            System.out.println("\nYou entered invalid month");
+            return;
+        }
+
+        printHeader(year, month);
     }
 
     public static void printHeader(int year, int monthNumber) {

@@ -37,6 +37,7 @@ public class PrintCalendar {
             System.out.println("\nBoth month and year are invalid.");
             return false;
         }
+
         if (month < 1 || month > 12) {
             System.out.println("\nThe month is invalid.");
             return false;

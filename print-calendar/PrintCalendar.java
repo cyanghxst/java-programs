@@ -131,6 +131,10 @@ public class PrintCalendar {
 
         int dayOfTheWeek = ((1 + (13 * month - 1) / 5) + twoDigitsOfYear + (twoDigitsOfYear / 4) + (century / 4) - (2 * century)) % 7;
 
+        while (dayOfTheWeek < 0) {
+            dayOfTheWeek += 7;
+        }
+
         return dayOfTheWeek;
     }
 

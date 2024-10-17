@@ -4,19 +4,32 @@ public class PrintCalendar {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Enter full year (e.g., 2001): ");
-        int year = scan.nextInt();
+        while (true) {
+            System.out.print("Enter full year (e.g., 2001): ");
+            int year = scan.nextInt();
 
-        System.out.print("Enter month in number between 1 and 12: ");
-        int month = scan.nextInt();
+            System.out.print("Enter month in number between 1 and 12: ");
+            int month = scan.nextInt();
 
-        if (month < 1 || month > 12) {
-            System.out.println("\nYou entered invalid month");
-            return;
+            if (isValid(month, year)) {
+                printHeader(month, year);
+                printBody(month, year);
+            }
+
+            while (true) {
+                System.out.print("\nWould you like to continue? [yes/no]: ");
+                String input = scan.next();
+
+                if (input.equalsIgnoreCase("yes")) {
+                    break;
+                } else if (input.equalsIgnoreCase("no")) {
+                    System.out.println("\nGoodbye Senpai (⌒ω⌒)ﾉ~");
+                    return;
+                }
+            }
+
+            System.out.println();
         }
-
-        printHeader(month, year);
-        printBody(month, year);
     }
 
     public static boolean isValid(int month, int year) {

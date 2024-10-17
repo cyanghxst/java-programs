@@ -20,11 +20,17 @@ public class PrintCalendar {
     }
 
     public static boolean isValid(int month, int year) {
+        if (year < 1582 && (month < 1 || month > 12)) {
+            System.out.println("\nBoth month and year are invalid.");
+            return false;
+        }
         if (month < 1 || month > 12) {
+            System.out.println("\nThe month is invalid.");
             return false;
         }
 
         if (year < 1582) {
+            System.out.println("\nThe year is invalid.");
             return false;
         }
 

@@ -147,7 +147,7 @@ public class PrintCalendar {
         int twoDigitsOfYear = year % 100;
         int century = year / 100;
 
-        int dayOfTheWeek = (1 + (13 * month - 1 / 5) + twoDigitsOfYear + (twoDigitsOfYear / 4) + (century / 4) - (2 * century)) % 7;
+        int dayOfTheWeek = ((1 + (13 * month - 1) / 5) + twoDigitsOfYear + (twoDigitsOfYear / 4) + (century / 4) - (2 * century)) % 7;
 
         return dayOfTheWeek;
     }

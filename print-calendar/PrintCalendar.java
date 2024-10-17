@@ -19,6 +19,18 @@ public class PrintCalendar {
         printBody(month, year);
     }
 
+    public static boolean isValid(int month, int year) {
+        if (month < 1 || month > 12) {
+            return false;
+        }
+
+        if (year < 1582) {
+            return false;
+        }
+
+        return true;
+    }
+
     public static void printHeader(int month, int year) {
         String monthName = monthName(month);
         String line = "-----------------------------";

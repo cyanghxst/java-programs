@@ -16,7 +16,7 @@ public class CountOccurences {
         int random;
 
         for (int i = 0; i < array.length; i++) {
-            random = (int) ((Math.random() * 16) + 97);
+            random = (int) ((Math.random() * 26) + 97);
             array[i] = (char) random;
         }
 

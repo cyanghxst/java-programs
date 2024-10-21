@@ -1,9 +1,13 @@
 public class CountOccurences {
     public static void main(String[] args) {
         final int SIZE = 100;
-
         char[] array = genRandomArray(SIZE);
+
+        System.out.println("In this array");
         printArray(array);
+
+        System.out.println();
+
         countCharInArray(array);
     }
 

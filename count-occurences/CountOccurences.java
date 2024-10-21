@@ -3,6 +3,7 @@ public class CountOccurences {
         final int SIZE = 100;
 
         char[] array = genRandomArray(SIZE);
+        countCharInArray(array);
     }
 
     public static char[] genRandomArray(int size) {

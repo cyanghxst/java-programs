@@ -32,17 +32,17 @@ public class CountOccurences {
     }
 
     public static void countCharInArray(char[] array) {
-        System.out.print("There are ");
+        System.out.println("There are");
 
         for (int charNum = 97; charNum <= 122; charNum++) {
             char charName = (char) charNum;
             int count = countChar(charName, array);
 
             if (count > 0) {
-                System.out.printf("%d %c's ", count, charName);
+                System.out.printf("%d %c's\n", count, charName);
             }
-            System.out.println();
         }
+    }
 
     public static void printArray(char[] array) {
         System.out.print("[");

@@ -28,4 +28,19 @@ public class CountOccurences {
 
         return count;
     }
+
+    public static void countCharInArray(char[] array) {
+        System.out.print("There are ");
+
+        for (int charNum = 97; charNum <= 122; charNum++) {
+            char charName = (int) charNum;
+            int count = countChar(ch, array);
+
+            if (count > 0) {
+                System.out.printf("%d %c's ", count, charName);
+            }
+        }
+
+        System.out.println();
+    }
 }

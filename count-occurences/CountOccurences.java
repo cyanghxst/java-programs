@@ -3,6 +3,7 @@ public class CountOccurences {
         final int SIZE = 100;
 
         char[] array = genRandomArray(SIZE);
+        printArray(array);
         countCharInArray(array);
     }
 
@@ -43,6 +44,21 @@ public class CountOccurences {
             System.out.println();
         }
 
-        System.out.println();
+    public static void printArray(char[] array) {
+        System.out.print("[");
+
+        for (int i = 0; i < array.length; i++) {
+            if (i == array.length - 1) {
+                System.out.printf("%c]", array[i]);
+            } else {
+                System.out.printf("%c, ", array[i]);
+            }
+
+            if ((i + 1) % 10 == 0 && i < array.length - 1) {
+                System.out.printf("\n ");
+            } else if (i == array.length - 1){
+                System.out.println();
+            }
+        }
     }
 }

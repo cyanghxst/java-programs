@@ -13,6 +13,20 @@ public class ArrayShuffling {
         printArray(array);
     }
 
+    public static void shuffle(int[] array) {
+        int temp;
+        int random;
+        int lastIndex = array.length - 1;
+
+        for (int i = 0; i < array.length; i++) {
+            temp = array[i];
+            random = (int) (Math.random() * (lastIndex + 1));
+
+            array[i] = array[random];
+            array[random] = temp;
+        }
+    }
+
     public static int[] genRandomArray(int size) {
         int[] array = new int[size];
 

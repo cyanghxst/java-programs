@@ -3,6 +3,12 @@ public class ArrayShuffling {
         final int SIZE = 10;
 
         int[] array = genRandomArray(SIZE);
+
+        System.out.println("Array is");
+        printArray(array);
+
+        System.out.println("Shuffled array is");
+        printArray(array);
     }
 
     public static int[] genRandomArray(int size) {

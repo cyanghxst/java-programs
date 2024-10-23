@@ -24,7 +24,7 @@ public class ArrayShuffling {
     }
 
     public static void printArray(int[] array) {
-        System.out.println("[");
+        System.out.print("[");
 
         for (int i = 0; i < array.length; i++) {
             if (i == array.length - 1) {
@@ -32,7 +32,7 @@ public class ArrayShuffling {
                 continue;
             }
 
-            if (i % 10 == 0) {
+            if ((i + 1) % 10 == 0) {
                 System.out.printf("%d,\n ", array[i]);
             } else {
                 System.out.printf("%d, ", array[i]);

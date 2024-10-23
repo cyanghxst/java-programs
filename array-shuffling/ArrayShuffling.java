@@ -15,7 +15,7 @@ public class ArrayShuffling {
         int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = Math.random() * 10;
+            array[i] = (int) (Math.random() * 10);
         }
 
         return array;

@@ -9,6 +9,8 @@ public class ArrayShuffling {
 
         System.out.println();
 
+        shuffle(array);
+
         System.out.println("Shuffled array is:");
         printArray(array);
     }

@@ -18,7 +18,7 @@ public class ArrayReversing {
         int lastIndex = array.length - 1;
         int[] newArray = copyArray(array);
 
-        for (int i = 0; i < size / 2; i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             swap(newArray, i, lastIndex - i);
         }
 

@@ -30,4 +30,14 @@ public class ArrayReversing {
         array[index1] = array[index2];
         array[index2] = temp;
     }
+
+    public static int[] copyArray(int[] array) {
+        int[] newArray = new int[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
+        }
+
+        return newArray;
+    }
 }

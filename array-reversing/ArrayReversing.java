@@ -1,7 +1,17 @@
 public class ArrayReversing {
     public static void main(String[] args) {
         final int SIZE = 10;
+
         int[] array = genArray(SIZE);
+        int[] newArray = reverseArray(array);
+
+        System.out.println("Before swapping:");
+        System.out.println(java.util.Arrays.toString(array));
+
+        System.out.println();
+
+        System.out.println("After swapping:");
+        System.out.println(java.util.Arrays.toString(newArray));
     }
 
     public static int[] genArray(int size) {

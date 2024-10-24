@@ -13,4 +13,15 @@ public class ArrayReversing {
 
         return array;
     }
+
+    public static int[] reverseArray(int[] array) {
+        int lastIndex = array.length - 1;
+        int[] newArray = copyArray(array);
+
+        for (int i = 0; i < size / 2; i++) {
+            swap(newArray, i, lastIndex - i);
+        }
+
+        return newArray;
+    }
 }

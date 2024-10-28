@@ -9,6 +9,7 @@ public class FileIO1 {
             while (scanner.hasNextLine()) { 
                 String line = scanner.nextLine();
                 System.out.println(line);
+                outFile.println(line);
             }
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());

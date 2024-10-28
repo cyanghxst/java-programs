@@ -11,7 +11,7 @@ public class FileIO2 {
 		outFile = new PrintWriter(new FileWriter("output.txt"));
 
 		while (inFile.hasNextLine()) {
-			line = infile.nextLine();
+			line = inFile.nextLine();
 
 			System.out.println(line);
 			outFile.println(line);

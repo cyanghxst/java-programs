@@ -7,14 +7,22 @@ public class Overloading {
     }
 
     public static int calculate(int a, int b) {
+        System.out.println("\nFirst method");
         return a + b;
     }
 
     public static double calculate(double a, double b) {
+        System.out.println("\nSecond method");
         return a * b;
     }
 
     public static double calculate(int a, double b) {
+        System.out.println("\nThird method");
         return a - b;
+    }
+
+    public static double calculate(double a, int b) {
+        System.out.println("\nForth method");
+        return a / b;
     }
 }

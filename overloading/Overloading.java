@@ -1,8 +1,9 @@
 public class Overloading {
     public static void main(String[] args) {
-        calculate(5, 3);
-        calculate(5.0, 3);
-        calculate(5.0, 3.0);
+        System.out.println(calculate(5, 3));
+        System.out.println(calculate(5.0, 3));
+        System.out.println(calculate(5.0, 3));
+        System.out.println(calculate(5.0, 3.0));
     }
 
     public static int calculate(int a, int b) {

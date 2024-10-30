@@ -18,7 +18,7 @@ public class FileIO5 {
 			String line = inFile.nextLine();
             int indexOfSpace = line.indexOf(" ");
 
-            String printable = line.substring(indexOfSpace);
+            String printable = line.substring(indexOfSpace + 1);
 			System.out.println(printable);
 			outFile.println(printable);
 		}

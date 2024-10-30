@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class FileIO2 {
+public class FileIO4 {
 	public static void main(String[] args) throws IOException {
 		Scanner keyboard = new Scanner(System.in);
 

@@ -8,6 +8,6 @@ public class SumRecursion {
             return 1;
         }
 
-        return sum(num) + sum(num - 1);
+        return num + sum(num - 1);
     }
 }

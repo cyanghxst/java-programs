@@ -7,7 +7,7 @@ public class GcdAndLcm {
         System.out.print("Enter the first integer: ");
         int num1 = scan.nextInt();
 
-        System.out.print("Enter the first integer: ");
+        System.out.print("Enter the second integer: ");
         int num2 = scan.nextInt();
 
         System.out.printf("\nThe GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));

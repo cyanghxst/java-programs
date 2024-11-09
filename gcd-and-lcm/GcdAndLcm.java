@@ -22,14 +22,12 @@ public class GcdAndLcm {
             int remainder = dividend % divisor;
 
             if (remainder == 0) {
-                break;
+                return divisor;
             }
 
             dividend = divisor;
             divisor = remainder;
         }
-
-        return divisor;
     }
 
     public static int lcm(int num1, int num2) {

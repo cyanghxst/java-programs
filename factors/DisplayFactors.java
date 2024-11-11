@@ -34,5 +34,7 @@ public class DisplayFactors {
                 }
             }
         }
+
+        System.out.println(number);
     }
 }

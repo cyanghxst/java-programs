@@ -11,6 +11,11 @@ public class DisplayFactors2 {
     }
 
     public static void displayFactors(int number) {
+        if (number == 1) {
+            System.out.println(1);
+            return;
+        }
+
         while (true) {
             boolean isPrime = true;
 

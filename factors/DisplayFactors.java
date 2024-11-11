@@ -35,6 +35,16 @@ public class DisplayFactors {
     public static void displayFactors(int number) {
         System.out.printf("The factors are: ");
 
+        if (number == 1) {
+            System.out.println(1);
+            return;
+        }
+
+        if (isPrime(number)) {
+            System.out.println("1 " + number);
+            return;
+        }
+
         while (!isPrime(number)) {
             for (int divisor = 2; divisor <= Math.sqrt(number); divisor++) {
                 if (number % divisor == 0) {

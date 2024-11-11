@@ -25,10 +25,12 @@ public class DisplayFactors {
     }
 
     public static void displayFactors(int number) {
+        System.out.printf("The factors are: ");
+
         while (!isPrime(number)) {
             for (int divisor = 2; divisor <= Math.sqrt(number); divisor++) {
                 if (number % divisor == 0) {
-                    System.out.println(divisor);
+                    System.out.print(divisor + " ");
                     number /= divisor;
                     break;
                 }

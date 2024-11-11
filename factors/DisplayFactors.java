@@ -7,7 +7,12 @@ public class DisplayFactors {
         System.out.print("Enter a positive integer: ");
         int number = scan.nextInt();
 
-        displayFactors(number);
+        if (isValid(number)) {
+            displayFactors(number);
+        } else {
+            System.out.println("The number is invalid");
+        }
+    }
     }
 
     public static boolean isPrime(int number) {

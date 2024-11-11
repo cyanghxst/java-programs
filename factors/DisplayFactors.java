@@ -13,6 +13,9 @@ public class DisplayFactors {
             System.out.println("The number is invalid");
         }
     }
+
+    public static boolean isValid(int number) {
+        return number > 0;
     }
 
     public static boolean isPrime(int number) {

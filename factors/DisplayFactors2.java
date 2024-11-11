@@ -11,6 +11,8 @@ public class DisplayFactors2 {
     }
 
     public static void displayFactors(int number) {
+        System.out.print("Factors: ");
+
         if (number == 1) {
             System.out.println(1);
             return;

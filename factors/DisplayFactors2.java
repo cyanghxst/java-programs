@@ -11,9 +11,9 @@ public class DisplayFactors2 {
     }
 
     public static void displayFactors(int number) {
-        boolean isPrime = false;
+        while (true) {
+            boolean isPrime = true;
 
-        while (!isPrime) {
             if (number < 2) {
                 isPrime = false;
             }
@@ -25,6 +25,11 @@ public class DisplayFactors2 {
                 }
             }
 
+            if (isPrime) {
+                System.out.println(number);
+                break;
+            }
+
             for (int divisor = 2; divisor <= Math.sqrt(number); divisor++) {
                 if (number % divisor == 0) {
                     System.out.print(divisor + " ");
@@ -33,7 +38,5 @@ public class DisplayFactors2 {
                 }
             }
         }
-
-        System.out.println(number);
     }
 }

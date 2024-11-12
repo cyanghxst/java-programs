@@ -42,9 +42,9 @@ public class DisplayPalindromicPrime {
         int lastIndex = size - 1;
 
         for (int i = 0; i < size / 2; i++) {
-            char ch = numberString(lastIndex - i);
+            char ch = numberString.charAt(lastIndex - i);
 
-            if (numberString(i) != ch) {
+            if (numberString.charAt(i) != ch) {
                 return false;
             }
         }

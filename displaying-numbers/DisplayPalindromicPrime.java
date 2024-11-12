@@ -7,14 +7,14 @@ public class DisplayPalindromicPrime {
         int number = 0;
         int count = 0;
 
-        while (true) {
-            if (count == 100) {
-                break;
-            }
-
+        while (count < 100) {
             if (isPrime(number) && isPalindrome(number)) {
-                System.out.println(number);
+                System.out.print(number + " ");
                 count++;
+
+                if (count % 10 == 0) {
+                    System.out.println();
+                }
             }
 
             number++;

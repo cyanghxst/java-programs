@@ -6,6 +6,8 @@ public class MakeChange {
 
         System.out.print("Enter a purchase less than one dollar: ");
         int purchase = scan.nextInt();
+
+        makeChange(purchase);
     }
 
     public static void makeChange(int purchase) {
@@ -13,6 +15,8 @@ public class MakeChange {
             System.out.println("The purchase is invalid");
             return;
         }
+
+        int change = 100 - purchase;
 
         int[] coins = {25, 10, 5, 1};
         String[] names = {"quarter", "dime", "nickle", "penny"};

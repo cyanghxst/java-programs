@@ -2,7 +2,9 @@ public class ConsecutiveNumbers {
     public static void main(String[] args) {
         int[] values = generateArray(20);
 
-        System.out.printf("The array %s three consecutive numbers with the same value", (isConsecutiveThree(values) ? "has" : "doesn't have"));
+        System.out.println(java.util.Arrays.toString(values));
+
+        System.out.printf("The array %s three consecutive numbers with the same value\n", (isConsecutiveThree(values) ? "has" : "doesn't have"));
     }
 
     public static int[] generateArray(int size) {

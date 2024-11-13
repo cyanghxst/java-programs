@@ -60,7 +60,7 @@ public class LuhnCheck {
     public static int sumOfEvenDigits(int[] array) {
         int sum = 0;
 
-        for (int i = length - 2; i >= 0; i -= 2) {
+        for (int i = array.length - 2; i >= 0; i -= 2) {
             int result = array[i] * 2;
 
             if (result > 9) {

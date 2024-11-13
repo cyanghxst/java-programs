@@ -39,14 +39,18 @@ public class LuhnCheck {
 
         int sum1 = 0;
 
-        for (int i = length - 1; i >= 0; i -= 2) {
+        for (int i = length - 2; i >= 0; i -= 2) {
             int result = array[i] * 2;
 
             if (result > 9) {
-                while (result > 0) {
-                    result += result % 10;
-                    result /= 10;
+                String numStr = Integer.toString(result);
+                int[] digits = new int[numStr.length()];
+
+                for (int j = 0; j < numStr.length(); j++) {
+                    digits[j] = numStr.charAt(j) - '0';
                 }
+
+                result = digits[0] + digits[1];
             }
 
             sum1 += result;

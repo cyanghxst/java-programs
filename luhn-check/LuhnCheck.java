@@ -9,8 +9,12 @@ public class LuhnCheck {
     }
 
     public static boolean isValid(String number) {
-        int[] array = number.split("");
-        int length = array.length;
+        int length = number.length();
+        int[] array = new int[length];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = number.charAt(i) - '0';
+        }
 
         if (length < 13 || length > 16) {
             return false;

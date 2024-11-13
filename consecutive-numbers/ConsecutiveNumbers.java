@@ -17,13 +17,14 @@ public class ConsecutiveNumbers {
 
     public static boolean isConsecutiveThree (int[] values) {
         int key = values[0];
-        int count = 0;
+        int count = 1;
 
         for (int i = 0; i < values.length; i++) {
             if (values[i] == key) {
                 count++;
             } else {
-                key = value[i];
+                key = values[i];
+                count = 1;
             }
 
             if (count == 3) {

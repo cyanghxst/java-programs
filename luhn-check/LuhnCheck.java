@@ -41,9 +41,6 @@ public class LuhnCheck {
         int sum2 = sumOfOddDigits(array);
         int sum3 = sum1 + sum2;
 
-        System.out.println(sum1);
-        System.out.println(sum2);
-
         return sum3 % 10 == 0;
     }
 

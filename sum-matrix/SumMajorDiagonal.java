@@ -3,6 +3,9 @@ public class SumMajorDiagonal {
         double[][] matrix = generateMatrix(4);
 
         printMatrix(matrix);
+
+        System.out.println();
+
         System.out.println(sumMajorDiagonal(matrix));
     }
 

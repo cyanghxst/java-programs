@@ -37,6 +37,23 @@ public class LuhnCheck {
                 return false;
         }
 
+        int sum1 = 0;
+
+        for (int i = length - 1; i >= 0; i -= 2) {
+            int result = array[i] * 2;
+
+            if (result > 9) {
+                while (result > 0) {
+                    result += result % 10;
+                    result /= 10;
+                }
+            }
+
+            sum1 += result;
+        }
+
+        System.out.println(sum1);
+
         return true;
     }
 }

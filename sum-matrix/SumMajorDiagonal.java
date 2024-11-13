@@ -17,15 +17,15 @@ public class SumMajorDiagonal {
     }
 
     public static double[][] generateMatrix(int size) {
-        double[][] matrix = new double[size][size];
+        double[][] m = new double[size][size];
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; i < matrix[i].length; j++) {
-                matrix[i][j] = Math.random() * 20 + 1;
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                m[i][j] = Math.random() * 20 + 1;
             }
         }
 
-        return matrix;
+        return m;
     }
 
     public static double sumMajorDiagonal(double[][] m) {

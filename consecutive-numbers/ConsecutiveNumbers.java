@@ -16,6 +16,21 @@ public class ConsecutiveNumbers {
     }
 
     public static boolean isConsecutiveThree (int[] values) {
-        return true;
+        int key = values[0];
+        int count = 0;
+
+        for (int i = 0; i < values.length; i++) {
+            if (values[i] == key) {
+                count++;
+            } else {
+                key = value[i];
+            }
+
+            if (count == 3) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

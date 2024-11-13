@@ -37,7 +37,18 @@ public class LuhnCheck {
                 return false;
         }
 
-        int sum1 = 0;
+        int sum1 = sumOfEvenDigits(array);
+        int sum2 = sumOfOddDigits(array);
+        int sum3 = sum1 + sum2;
+
+        System.out.println(sum1);
+        System.out.println(sum2);
+
+        return sum3 % 10 == 0;
+    }
+
+    public static int sumOfEvenDigits(int[] array) {
+        int sum = 0;
 
         for (int i = length - 2; i >= 0; i -= 2) {
             int result = array[i] * 2;
@@ -53,11 +64,9 @@ public class LuhnCheck {
                 result = digits[0] + digits[1];
             }
 
-            sum1 += result;
+            sum += result;
         }
 
-        System.out.println(sum1);
-
-        return true;
+        return sum;
     }
 }

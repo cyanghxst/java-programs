@@ -21,7 +21,8 @@ public class SumMajorDiagonal {
 
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[i].length; j++) {
-                m[i][j] = Math.random() * 20 + 1;
+                double random = Math.random() * 20 + 1;
+                m[i][j] = (double) Math.round(random * 100) / 100;
             }
         }
 

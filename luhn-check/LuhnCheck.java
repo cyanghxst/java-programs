@@ -6,6 +6,9 @@ public class LuhnCheck {
 
         System.out.print("Enter a credit card number: ");
         String number = scan.nextLine();
+
+        String printout = "The number is " + (isValid(number) ? "valid" : "invalid");
+        System.out.println(printout);
     }
 
     public static boolean isValid(String number) {

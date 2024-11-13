@@ -47,6 +47,16 @@ public class LuhnCheck {
         return sum3 % 10 == 0;
     }
 
+    public static int sumOfOddDigits(int[] array) {
+        int sum = 0;
+
+        for (int i = array.length - 1; i >= 0; i -= 2) {
+            sum += array[i];
+        }
+
+        return sum;
+    }
+
     public static int sumOfEvenDigits(int[] array) {
         int sum = 0;
 

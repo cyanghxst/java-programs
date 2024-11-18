@@ -26,11 +26,8 @@ public class InsertionSort {
 
     public static void insert(int[] array, int fromIndex) {
         for (int i = fromIndex; i > 0; i--) {
-            int index = i;
-
-            if (array[index] < array[index - 1]) {
-                swap(array, index, index - 1);
-                index = index - 1;
+            if (array[i] < array[i - 1]) {
+                swap(array, i, i - 1);
             }
         }
     }

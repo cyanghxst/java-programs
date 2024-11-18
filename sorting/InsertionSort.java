@@ -19,16 +19,19 @@ public class InsertionSort {
 
     public static void sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            for (int j = i; j > 0; j--) {
-                int index = j;
-
-                if (array[index] < array[index - 1]) {
-                    swap(array, index, index - 1);
-                    index = index - 1;
-                }
-            }
-
+            insert(array, i);
             System.out.printf("\nPass %d: \n%s\n", i, java.util.Arrays.toString(array));
+        }
+    }
+
+    public static void insert(int[] array, int fromIndex) {
+        for (int i = fromIndex; i > 0; i--) {
+            int index = i;
+
+            if (array[index] < array[index - 1]) {
+                swap(array, index, index - 1);
+                index = index - 1;
+            }
         }
     }
 

@@ -25,6 +25,8 @@ public class InsertionSort {
             if (array[index] < array[previous]) {
                 swap(array, index, previous);
             }
+
+            System.out.printf("\nPass %d: \n%s\n", i, java.util.Arrays.toString(array));
         }
     }
 

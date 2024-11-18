@@ -28,6 +28,13 @@ public class BubbleSort {
         return array;
     }
 
+    public static void shuffle(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int random = (int) (Math.random() * array.length);
+            swap(array, i, index2);
+        }
+    }
+
     public static void sort(int[] array) {
         for (int i = 1; i <= array.length; i++) {
             bubble(array);

@@ -2,6 +2,10 @@ public public class BubbleSort {
     public static void main(String[] args) {
         int[] array = generateArray(10);
         System.out.println("Original Array:\n" + java.util.Arrays.toString(array));
+
+        sort(array);
+
+        System.out.println("Sorted Array:\n" + java.util.Arrays.toString(array));
     }
 
     public static int[] generateArray(int size) {

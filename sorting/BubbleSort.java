@@ -25,6 +25,7 @@ public public class BubbleSort {
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
             }
+            System.out.printf("Pass %d:\n%s\n", i + 1, java.util.Arrays.toString(array));
         }
     }
 }

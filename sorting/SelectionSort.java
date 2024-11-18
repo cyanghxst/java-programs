@@ -1,10 +1,10 @@
 public class SelectionSort {
     public static void main(String[] args) {
         int[] array = generateArray(10);
-        System.out.println(java.util.Arrays.toString(array));
+        System.out.println("Original Array:\n" + java.util.Arrays.toString(array));
 
         sort(array);
-        System.out.println(java.util.Arrays.toString(array));
+        System.out.println("\nSorted Array:\n" + java.util.Arrays.toString(array));
     }
 
     public static int[] generateArray(int size) {

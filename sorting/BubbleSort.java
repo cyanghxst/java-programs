@@ -5,7 +5,7 @@ public class BubbleSort {
 
         sort(array);
 
-        System.out.println("Sorted Array:\n" + java.util.Arrays.toString(array));
+        System.out.println("\nSorted Array:\n" + java.util.Arrays.toString(array));
     }
 
     public static int[] generateArray(int size) {

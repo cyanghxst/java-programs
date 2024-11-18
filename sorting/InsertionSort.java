@@ -19,11 +19,13 @@ public class InsertionSort {
 
     public static void sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            int index = i;
-            int previous = i - 1;
+            for (int j = i; j > 0; j--) {
+                int index = j;
 
-            if (array[index] < array[previous]) {
-                swap(array, index, previous);
+                if (array[index] < array[index - 1]) {
+                    swap(array, index, index - 1);
+                    index = index - 1;
+                }
             }
 
             System.out.printf("\nPass %d: \n%s\n", i, java.util.Arrays.toString(array));

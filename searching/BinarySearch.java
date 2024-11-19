@@ -15,6 +15,23 @@ public class BinarySearch {
         return array;
     }
 
+    public static void sort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int smallest = array[i];
+            int smallestIndex = i;
+
+            for (int j = i; j < array.length; j++) {
+                if (array[j] < smallest) {
+                    smallest = array[j];
+                    smallestIndex = j;
+                }
+            }
+
+            array[i] = array[smallestIndex];
+            array[smallestIndex] = smallest;
+        }
+    }
+
     public static int findIndex(int[] array, int key) {
         int first = 0;
         int last = array.length - 1;

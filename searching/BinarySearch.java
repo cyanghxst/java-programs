@@ -1,8 +1,27 @@
+import java.util.Scanner;
+
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] array = generate(10);
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("Original Array:\n" + java.util.Arrays.toString(array));
+        int[] array = generate(10);
+        System.out.println("Array:\n" + java.util.Arrays.toString(array));
+
+        sort(array);
+
+        System.out.println("\nSorted Array:\n" + java.util.Arrays.toString(array));
+
+        System.out.printf("\nEnter a number you want to search: ");
+        int key = scan.nextInt();
+
+        int index = findIndex(array, key);
+
+        if (index == -1) {
+            System.out.printf("\n%d is not found\n", key);
+            return;
+        }
+
+        System.out.printf("\nIndex of %d is %d\n", key, index);
     }
 
     public static int[] generate(int size) {

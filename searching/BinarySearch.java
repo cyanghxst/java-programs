@@ -27,8 +27,8 @@ public class BinarySearch {
                 }
             }
 
-            array[i] = array[smallestIndex];
-            array[smallestIndex] = smallest;
+            array[smallestIndex] = array[i];
+            array[i] = smallest;
         }
     }
 

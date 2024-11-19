@@ -21,7 +21,7 @@ public class BubbleSort {
     public static void shuffle(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int random = (int) (Math.random() * array.length);
-            swap(array, i, index2);
+            swap(array, i, random);
         }
     }
 
@@ -43,9 +43,7 @@ public class BubbleSort {
 
         for (int j = 0; j < lastIndex; j++) {
             if (array[j] > array[j + 1]) {
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                swap(array, j, j + 1);
             }
         }
     }

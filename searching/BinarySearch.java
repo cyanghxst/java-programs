@@ -14,4 +14,28 @@ public class BinarySearch {
 
         return array;
     }
+
+    public static int findIndex(int[] array, int key) {
+        int first = 0;
+        int last = array.length - 1;
+
+        while (first <= last) {
+            int index = (first + last) / 2;
+            int element = array[index];
+
+            if (element == key) {
+                return index;
+            }
+
+            if (element > key) {
+                last = index - 1;
+            }
+
+            if (element < key) {
+                first = index + 1;
+            }
+        }
+
+        return -1;
+    }
 }

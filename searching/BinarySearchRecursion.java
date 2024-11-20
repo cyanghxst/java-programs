@@ -39,20 +39,15 @@ public class BinarySearchRecursion {
     }
 
     public static int findIndex(int[] array, int index1, int index2, int key) {
-        if (index1 > index2) {
-            return -1;
-        }
+        if (index1 > index2) return -1;
 
         int middle = (index1 + index2) / 2;
 
-        if (array[middle] > key) {
-            return findIndex(array, index1, middle - 1, key);
-        }
+        if (array[middle] == key) return middle;
 
-        if (array[middle] < key) {
-            return findIndex(array, middle + 1, index2, key);
-        }
+        return (array[middle] > key)
+            ? findIndex(array, index1, middle - 1, key)
+            : findIndex(array, middle + 1, index2, key);
 
-        return middle;
     }
 }

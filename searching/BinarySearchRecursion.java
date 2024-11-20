@@ -16,7 +16,7 @@ public class BinarySearchRecursion {
             return;
         }
 
-        System.out.printf("\nThe index of %d is %d", key, findIndex(array, key));
+        System.out.printf("\nThe index of %d is %d\n", key, findIndex(array, key));
     }
 
     public static int[] generate(int size) {

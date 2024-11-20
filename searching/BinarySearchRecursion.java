@@ -19,6 +19,16 @@ public class BinarySearchRecursion {
         System.out.printf("\nThe index of %d is %d", key, findIndex(array, key));
     }
 
+    public static int[] generate(int size) {
+        int[] array = new int[size];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+
+        return array;
+    }
+
     public static int findIndex(int[] array, int key) {
         int first = 0;
         int last = array.length - 1;

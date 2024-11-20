@@ -39,15 +39,16 @@ public class BinarySearchRecursion {
     }
 
     public static int findIndex(int[] array, int index1, int index2, int key) {
-        if (index1 > index2) return -1;
+        if (index1 > index2) return -1; // base case: key not found
 
-        int middle = (index1 + index2) / 2;
+        int middle = (index1 + index2) / 2; // mid calculation
 
-        if (array[middle] == key) return middle;
+        if (array[middle] == key) return middle; // found the key
 
+        // recursive case
         return (array[middle] > key)
-            ? findIndex(array, index1, middle - 1, key)
-            : findIndex(array, middle + 1, index2, key);
+            ? findIndex(array, index1, middle - 1, key) // search left half
+            : findIndex(array, middle + 1, index2, key); // search right half
 
     }
 }

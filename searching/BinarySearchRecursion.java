@@ -11,7 +11,7 @@ public class BinarySearchRecursion {
         System.out.print("\nEnter an element to search: ");
         int key = scan.nextInt();
 
-        int index = findIndex(array, key);
+        int index = binarySearch(array, key);
 
         if (index == -1) {
             System.out.printf("\n%d is not found\n", key);
@@ -31,22 +31,26 @@ public class BinarySearchRecursion {
         return array;
     }
 
-    public static int findIndex(int[] array, int key) {
+    public static int binarySearch(int[] array, int key) {
         int first = 0;
         int last = array.length - 1;
 
-        return something(array, first, last, key);
+        return findIndex(array, first, last, key);
     }
 
-    public static int something(int[] array, int index1, int index2, int key) {
-        int middle = (index1 + index2) / 2;
-
-        if (middle > key) {
-            return something(array, index1, middle - 1, key);
+    public static int findIndex(int[] array, int index1, int index2, int key) {
+        if (index1 > index2) {
+            return -1;
         }
 
-        if (middle < key) {
-            return something(array, middle + 1, index2, key);
+        int middle = (index1 + index2) / 2;
+
+        if (array[middle] > key) {
+            return findIndex(array, index1, middle - 1, key);
+        }
+
+        if (array[middle] < key) {
+            return findIndex(array, middle + 1, index2, key);
         }
 
         return middle;

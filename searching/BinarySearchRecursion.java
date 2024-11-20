@@ -8,15 +8,17 @@ public class BinarySearchRecursion {
 
         System.out.printf("Array:\n%s\n", java.util.Arrays.toString(array));
 
-        System.out.print("Enter an element to search: ");
+        System.out.print("\nEnter an element to search: ");
         int key = scan.nextInt();
 
-        if (key == -1) {
+        int index = findIndex(array, key);
+
+        if (index == -1) {
             System.out.printf("\n%d is not found\n", key);
             return;
         }
 
-        System.out.printf("\nThe index of %d is %d\n", key, findIndex(array, key));
+        System.out.printf("\nThe index of %d is %d\n", key, index);
     }
 
     public static int[] generate(int size) {

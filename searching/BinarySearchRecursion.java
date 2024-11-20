@@ -4,7 +4,7 @@ public class BinarySearchRecursion {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int[] array = generate(10);
+        int[] array = generate(10, 22);
 
         System.out.printf("Array:\n%s\n", java.util.Arrays.toString(array));
 
@@ -21,11 +21,11 @@ public class BinarySearchRecursion {
         System.out.printf("\nThe index of %d is %d\n", key, index);
     }
 
-    public static int[] generate(int size) {
+    public static int[] generate(int size, int start) {
         int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = i + 1;
+            array[i] = i + start;
         }
 
         return array;

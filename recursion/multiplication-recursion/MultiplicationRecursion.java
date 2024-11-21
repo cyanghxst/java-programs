@@ -16,10 +16,7 @@ public class MultiplicationRecursion {
     }
 
     public static int multiply(int integer, int times) {
-        if (times == 1) {
-            return integer;
-        }
-
+        if (times == 0) return 0;
         return integer + multiply(integer, times - 1);
     }
 }

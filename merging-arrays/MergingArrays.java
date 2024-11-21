@@ -24,6 +24,16 @@ public class MergingArrays {
     public static int[] mergeArrays(int[] array1, int[] array2) {
         int[] array = new int[array1.length + array2.length];
 
+        int[] shortArray, longArray;
+
+        if (array1.length < array2.length) {
+            shortArray = array1;
+            longArray = array2;
+        } else {
+            shortArray = array2;
+            longArray = array1;
+        }
+
         for (int i = 0; i < shortArray.length * 2; i++) {
             if (i % 2 == 0) {
                 array[i] = array1[i / 2];

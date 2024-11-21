@@ -1,7 +1,7 @@
 public class MergingArrays {
     public static void main(String[] args) {
         int[] array1 = generate(10);
-        int[] array2 = generate(8);
+        int[] array2 = generate(3);
 
         System.out.printf("\nArray1:\n%s\n", java.util.Arrays.toString(array1));
         System.out.printf("\nArray2:\n%s\n", java.util.Arrays.toString(array2));
@@ -15,7 +15,7 @@ public class MergingArrays {
         int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 11);
+            array[i] = (int) (Math.random() * 101);
         }
 
         return array;

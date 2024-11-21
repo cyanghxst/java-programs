@@ -42,6 +42,10 @@ public class MergingArrays {
             }
         }
 
+        for (int i = shortArray.length * 2, j = shortArray.length; i < array.length; i++, j++) {
+            array[i] = longArray[j];
+        }
+
         return array;
     }
 }

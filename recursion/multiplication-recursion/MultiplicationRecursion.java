@@ -10,7 +10,9 @@ public class MultiplicationRecursion {
         System.out.print("\nEnter a number of times: ");
         int times = scan.nextInt();
 
-        System.out.printf("\n%d times %d = %d\n", integer, times, multiply(integer, times));
+        String result = (times >= 0) ? String.valueOf(multiply(integer, times)) : "-" + String.valueOf(multiply(integer, (int) Math.abs(times)));
+
+        System.out.printf("\n%d x %d = %s\n", integer, times, result);
     }
 
     public static int multiply(int integer, int times) {

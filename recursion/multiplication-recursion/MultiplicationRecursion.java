@@ -15,6 +15,7 @@ public class MultiplicationRecursion {
         System.out.printf("\n%d x %d = %s\n", integer, times, result);
     }
 
+    // using recursion instead of (integer * times) because, why not
     public static int multiply(int integer, int times) {
         if (times == 0) return 0;
         return integer + multiply(integer, times - 1);

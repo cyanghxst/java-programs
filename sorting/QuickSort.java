@@ -32,15 +32,25 @@ public class QuickSort {
 
     public static void quickSort(int[] array, int first, int last) {
         int pivot = array[1];
+    }
 
-        swap(array, 1, last);
-        System.out.printf("\nSwapped Pivot Array:\n%s\n", java.util.Arrays.toString(array));
+    public static int partition(int[] array, int first, int last) {
+        int random = getRandomIndex(first, last);
+        int pivot = array[random];
 
-        for (int i = 0, j = -1; i <= last; i++) {
+        swap(array, random, last);
+
+        int j = first - 1;
+
+        // lomuto partition
+        for (int i = first; i <= last; i++) {
             if (array[i] > pivot) continue;
             j++;
-            if (j < i) swap(array, i, j);
+            if (i > j) swap(array, i, j);
         }
+
+        return j;
+    }
 
     public static int getRandomIndex(int first, int last) {
         return (int) (Math.random() * (last - first + 1) + first);

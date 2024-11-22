@@ -31,7 +31,11 @@ public class QuickSort {
     }
 
     public static void quickSort(int[] array, int first, int last) {
-        int pivot = array[1];
+        if (first >= last) return;
+
+        int pivotIndex = partition(array, first, last);
+        quickSort(array, first, pivotIndex - 1);
+        quickSort(array, pivotIndex + 1, last);
     }
 
     public static int partition(int[] array, int first, int last) {

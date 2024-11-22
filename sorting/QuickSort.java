@@ -3,10 +3,10 @@ public class QuickSort {
         int[] array = generate(20);
 
         shuffle(array);
-        System.out.printf("Original Array:\n%s", java.util.Arrays.toString(array));
+        System.out.printf("Original Array:\n%s\n", java.util.Arrays.toString(array));
 
         quickSort(array);
-        System.out.printf("\nSorted Array:\n%s", java.util.Arrays.toString(array));
+        System.out.printf("\nSorted Array:\n%s\n", java.util.Arrays.toString(array));
     }
 
     public static int[] generate(int size) {

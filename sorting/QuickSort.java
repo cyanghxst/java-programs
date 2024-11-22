@@ -41,6 +41,9 @@ public class QuickSort {
             j++;
             if (j < i) swap(array, i, j);
         }
+
+    public static int getRandomIndex(int first, int last) {
+        return (int) (Math.random() * (last - first + 1) + first);
     }
 
     public static void swap(int[] array, int index1, int index2) {

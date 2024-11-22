@@ -29,6 +29,27 @@ public class QuickSort {
 
         }
     }
+
+    public static void quickSort(int[] array, int first, int last) {
+        int pivot = array[1];
+
+        swap(array, 1, last);
+        System.out.printf("\nSwapped Pivot Array:\n%s\n", java.util.Arrays.toString(array));
+
+        int j = -1;
+
+        for (int i = 0; i <= last; i++) {
+            if (array[i] > pivot) {
+                continue;
+            } else {
+                j++;
+                if (j < i) {
+                    swap(array, i, j);
+                }
+            }
+        }
+    }
+
     public static void swap(int[] array, int index1, int index2) {
         int temp = array[index1];
         array[index1] = array[index2];

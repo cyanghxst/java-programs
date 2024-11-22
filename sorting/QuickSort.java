@@ -26,7 +26,6 @@ public class QuickSort {
 
             array[i] = array[random];
             array[random] = temp;
-
         }
     }
 

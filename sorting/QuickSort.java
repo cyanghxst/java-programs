@@ -5,7 +5,7 @@ public class QuickSort {
         shuffle(array);
         System.out.printf("Original Array:\n%s\n", java.util.Arrays.toString(array));
 
-        quickSort(array);
+        quickSort(array, 0, array.length - 1);
         System.out.printf("\nSorted Array:\n%s\n", java.util.Arrays.toString(array));
     }
 

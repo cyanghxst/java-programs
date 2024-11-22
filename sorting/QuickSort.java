@@ -47,7 +47,7 @@ public class QuickSort {
 
         int j = first - 1;
 
-        // lomuto partition
+        // lomuto's partition
         for (int i = first; i <= last; i++) {
             if (array[i] > pivot) continue;
             j++;

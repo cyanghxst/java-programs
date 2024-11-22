@@ -36,17 +36,10 @@ public class QuickSort {
         swap(array, 1, last);
         System.out.printf("\nSwapped Pivot Array:\n%s\n", java.util.Arrays.toString(array));
 
-        int j = -1;
-
-        for (int i = 0; i <= last; i++) {
-            if (array[i] > pivot) {
-                continue;
-            } else {
-                j++;
-                if (j < i) {
-                    swap(array, i, j);
-                }
-            }
+        for (int i = 0, j = -1; i <= last; i++) {
+            if (array[i] > pivot) continue;
+            j++;
+            if (j < i) swap(array, i, j);
         }
     }
 

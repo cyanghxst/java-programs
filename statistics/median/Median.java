@@ -27,7 +27,9 @@ public class Median {
         int length = array.length;
 
         if (length % 2 == 0) {
-            return (array[length / 2 - 1] + array[length / 2]) / 2;
+            int half = length / 2;
+            int sum = array[half - 1] + array[half];
+            return (double) sum / 2;
         }
 
         return array[length / 2];

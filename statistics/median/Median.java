@@ -7,7 +7,13 @@ public class Median {
 
         double median = getMedian(array);
 
-        System.out.printf("\nThe median of the array is %d\n", median);
+        if (median == Math.round(median)) {
+            System.out.printf("\nThe median of the array is %.0f\n", median);
+            return;
+        }
+
+        System.out.printf("\nThe median of the array is %.1f\n", median);
+    }
 
     public static int getRandomSize() {
         return (int) (Math.random() * 19) + 2;

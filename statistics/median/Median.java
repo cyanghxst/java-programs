@@ -1,6 +1,6 @@
 public class Median {
     public static void main(String[] args) {
-        int[] array = generate(20);
+        int[] array = generate(getRandomSize());
         java.util.Arrays.sort(array);
 
         System.out.printf("Array:\n%s\n", java.util.Arrays.toString(array));
@@ -8,6 +8,9 @@ public class Median {
         double median = getMedian(array);
 
         System.out.printf("\nThe median of the array is %d\n", median);
+
+    public static int getRandomSize() {
+        return (int) (Math.random() * 19) + 2;
     }
 
     public static int[] generate(int size) {

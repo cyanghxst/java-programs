@@ -8,6 +8,7 @@ public class Transpose01 {
 
         int[][] transposed = transpose(matrix);
 
+        System.out.println();
         display(transposed);
     }
 
@@ -28,7 +29,7 @@ public class Transpose01 {
         int[][] transposed = new int[width][height];
 
         for (int row = 0; row < transposed.length; row++) {
-            for (int col = 0; col < transpoed[0].length; col++) {
+            for (int col = 0; col < transposed[row].length; col++) {
                 transposed[row][col] = matrix[col][row];
             }
         }

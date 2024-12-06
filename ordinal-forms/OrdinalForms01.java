@@ -17,7 +17,7 @@ public class OrdinalForms01 {
         int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(101);
+            array[i] = random.nextInt(1001);
         }
 
         return array;

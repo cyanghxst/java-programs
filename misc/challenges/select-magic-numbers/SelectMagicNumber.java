@@ -49,7 +49,7 @@ public class SelectMagicNumber {
         int[] array = new int[10];
 
         for (int i = 0; i < str.length(); i++) {
-            int digit = Integer.parseInt(str.charAt(i));
+            int digit = str.charAt(i) - '0';
             array[digit]++;
         }
 

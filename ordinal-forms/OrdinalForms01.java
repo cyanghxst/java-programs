@@ -32,8 +32,13 @@ public class OrdinalForms01 {
     }
 
     public static String format(int number) {
-        int lastTwoDigits = number % 100;
-        switch(lastTwoDigits) {
+        if (11 <= number && number <= 13) {
+            return number + "th";
+        }
+
+        int lastDigit = number % 10;
+
+        switch(lastDigit) {
             case 1:
                 return number + "st";
             case 2:
